@@ -1,6 +1,14 @@
 #ifndef FUNCTIONS_H
 #define FUNCTIONS_H
 
+
+#include <math.h>
+#include <Arduino.h>
+#include <Adafruit_BMP085.h>
+#include <Adafruit_MPU6050.h>
+#include <Adafruit_Sensor.h>
+#include <PIDv1.h>
+
 class Vector3 {
 public:
     int x, y, z;
@@ -40,7 +48,19 @@ class Rocket_Functions{
             Vector3 rotation;
             Vector3 angular_velocity;
             Vector3 angular_acceleration;
+
+            Vector3 raw_acceleration;
+            Vector3 raw_angular_acceleration;
+            Vector3 raw_gps;
+
+            bool Start_sensors(int type);
+            bool Calibrate_sensors();
+            void Update_sensors();
+
+            void Update_Inertial_Model();
         private:
+            float mass;
+            
 
 
 };

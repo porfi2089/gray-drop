@@ -1,7 +1,7 @@
 {
-    "configuration": "cpu=atmega328",
-    "board": "arduino:avr:nano",
-    "port": "COM6",
-    "sketch": "fligth soft.ino",
+    "configuration": "flash=2097152_65536,freq=133,opt=Small,rtti=Disabled,stackprotect=Disabled,exceptions=Disabled,dbgport=Disabled,dbglvl=None,usbstack=picosdk,wificountry=worldwide,ipbtstack=ipv4only,uploadmethod=default",
+    "board": "rp2040:rp2040:rpipicow",
+    "port": "COM1",
+    "sketch": "test.ino",
     "programmer": "avrisp"
 }
