@@ -53,6 +53,7 @@ class Rocket_Functions{
             Vector3 raw_angular_acceleration;
             Vector3 raw_gps;
 
+            Rocket()
             bool Start_sensors(int type);
             bool Calibrate_sensors();
             void Update_sensors();
